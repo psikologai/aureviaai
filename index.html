@@ -20,8 +20,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
   background:radial-gradient(ellipse 60% 50% at 10% 20%,rgba(201,67,42,.1) 0%,transparent 55%),
   radial-gradient(ellipse 50% 60% at 90% 80%,rgba(124,58,237,.07) 0%,transparent 55%)}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;
   display:flex;align-items:center;justify-content:space-between;padding:0 28px;
   background:rgba(8,7,11,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd)}
@@ -31,218 +29,108 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:62px;
 .logo-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;letter-spacing:4px}
 .nav-r{display:flex;align-items:center;gap:8px}
 .lang-sw{display:flex;gap:3px;background:var(--s2);border:1px solid var(--bd);border-radius:7px;padding:3px}
-.lb{padding:4px 11px;border-radius:5px;border:none;font-family:'DM Sans',sans-serif;
-  font-size:11px;font-weight:600;letter-spacing:1px;cursor:pointer;transition:all .2s;
-  background:transparent;color:var(--mu)}
+.lb{padding:4px 11px;border-radius:5px;border:none;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;cursor:pointer;transition:all .2s;background:transparent;color:var(--mu)}
 .lb.on{background:var(--red);color:#fff}
-
-/* HERO */
-.hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;text-align:center;padding:80px 24px 60px}
-.hero-chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--bd2);
-  border-radius:20px;padding:6px 18px;font-size:11px;color:var(--mu2);
-  letter-spacing:2px;text-transform:uppercase;margin-bottom:28px}
+.hnb{padding:6px 13px;background:transparent;border:1px solid var(--bd2);border-radius:7px;font-family:'DM Sans',sans-serif;font-size:11px;color:var(--mu2);cursor:pointer}
+.hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px 60px}
+.hero-chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--bd2);border-radius:20px;padding:6px 18px;font-size:11px;color:var(--mu2);letter-spacing:2px;text-transform:uppercase;margin-bottom:28px}
 .chip-dot{width:5px;height:5px;border-radius:50%;background:var(--red);animation:blink 2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-.hero-t1{font-family:'Cormorant Garamond',serif;font-size:clamp(68px,12vw,132px);
-  font-weight:300;line-height:.88;letter-spacing:-4px}
-.hero-t2{font-family:'Cormorant Garamond',serif;font-size:clamp(68px,12vw,132px);
-  font-weight:700;font-style:italic;color:var(--red);line-height:.88;letter-spacing:-3px;margin-bottom:22px}
-.hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(15px,2.2vw,21px);color:var(--mu2);margin-bottom:36px;line-height:1.5;max-width:480px}
-.hero-btn{padding:14px 38px;background:var(--red);color:#fff;border:none;border-radius:5px;
-  font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:2px;
-  text-transform:uppercase;cursor:pointer;transition:all .25s}
-.hero-btn:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,67,42,.35)}
-.pills-row{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:36px}
+.ht1{font-family:'Cormorant Garamond',serif;font-size:clamp(68px,12vw,132px);font-weight:300;line-height:.88;letter-spacing:-4px}
+.ht2{font-family:'Cormorant Garamond',serif;font-size:clamp(68px,12vw,132px);font-weight:700;font-style:italic;color:var(--red);line-height:.88;letter-spacing:-3px;margin-bottom:22px}
+.hsub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(15px,2.2vw,21px);color:var(--mu2);margin-bottom:36px;line-height:1.5;max-width:480px}
+.hbtn{padding:14px 38px;background:var(--red);color:#fff;border:none;border-radius:5px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .25s}
+.hbtn:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,67,42,.35)}
+.pills{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:36px}
 .pill{border:1px solid var(--bd);border-radius:6px;padding:6px 13px;font-size:11px;color:var(--mu2);background:var(--s1)}
-
-/* MAIN */
 .main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:48px 20px 80px}
-.ey{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:3px;
-  text-transform:uppercase;color:var(--red);margin-bottom:22px}
+.ey{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--red);margin-bottom:22px}
 .ey::after{content:'';flex:1;height:1px;background:var(--bd)}
-
-/* FREE COUNTER */
-.free-ctr{background:var(--s2);border:1px solid var(--bd);border-radius:10px;
-  padding:12px 16px;display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:14px;flex-wrap:wrap;gap:8px}
-.fc-dots{display:flex;gap:5px}
-.fc-dot{width:10px;height:10px;border-radius:50%;background:var(--green);transition:background .3s}
-.fc-dot.used{background:var(--bd2)}
-.fc-txt{font-size:13px;color:var(--mu2);margin-left:10px}
-
-/* TABS */
-.i-tabs{display:flex;gap:3px;background:var(--s2);border:1px solid var(--bd);
-  border-radius:9px;padding:4px;margin-bottom:14px}
-.i-tab{flex:1;padding:9px 6px;border:none;border-radius:7px;font-family:'DM Sans',sans-serif;
-  font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:var(--mu);transition:all .2s}
-.i-tab.on{background:var(--s3);color:var(--text);border:1px solid var(--bd2)}
-
-/* FORM */
-.form-card{background:var(--s1);border:1px solid var(--bd);border-radius:12px;
-  overflow:hidden;margin-bottom:14px}
-.form-top{padding:13px 18px;border-bottom:1px solid var(--bd);
-  display:flex;align-items:center;justify-content:space-between}
-.form-top-tit{font-size:14px;font-weight:600}
-.char-ct{font-size:11px;color:var(--mu)}
-.form-bod{padding:16px 18px}
-textarea{width:100%;min-height:185px;background:var(--bg);border:1.5px solid var(--bd);
-  border-radius:8px;padding:13px 14px;color:var(--text);font-family:'DM Sans',sans-serif;
-  font-size:13px;line-height:1.75;resize:vertical;outline:none;transition:border-color .2s}
+.ibox{background:var(--s2);border:1px solid var(--bd);border-radius:10px;padding:13px 16px;margin-bottom:14px;display:flex;align-items:center;gap:10px;font-size:12px;color:var(--mu2);line-height:1.6}
+.itabs{display:flex;gap:3px;background:var(--s2);border:1px solid var(--bd);border-radius:9px;padding:4px;margin-bottom:14px}
+.itab{flex:1;padding:9px 6px;border:none;border-radius:7px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:var(--mu);transition:all .2s}
+.itab.on{background:var(--s3);color:var(--text);border:1px solid var(--bd2)}
+.fcard{background:var(--s1);border:1px solid var(--bd);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.ftop{padding:13px 18px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between}
+.ftit{font-size:14px;font-weight:600}
+.cct{font-size:11px;color:var(--mu)}
+.fbod{padding:16px 18px}
+textarea{width:100%;min-height:200px;background:var(--bg);border:1.5px solid var(--bd);border-radius:8px;padding:13px 14px;color:var(--text);font-family:'DM Sans',sans-serif;font-size:13px;line-height:1.75;resize:vertical;outline:none;transition:border-color .2s}
 textarea:focus{border-color:var(--red)}
 textarea::placeholder{color:var(--mu)}
-
-/* DROP ZONE */
-.drop-z{width:100%;min-height:200px;background:var(--bg);border:2px dashed var(--bd);
-  border-radius:10px;display:flex;flex-direction:column;align-items:center;
-  justify-content:center;gap:10px;cursor:pointer;transition:all .25s;position:relative;overflow:hidden}
-.drop-z:hover,.drop-z.drag{border-color:var(--red);background:rgba(201,67,42,.04)}
-.drop-z.has-img{border-style:solid;border-color:var(--bd2);cursor:default;padding:12px}
-#prev-img{max-width:100%;max-height:300px;object-fit:contain;border-radius:8px;display:none}
-.clr-img{margin-top:10px;padding:6px 14px;background:transparent;border:1px solid var(--bd2);
-  border-radius:6px;color:var(--mu2);font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif}
-
-/* DEPTH */
-.dep-row{display:flex;align-items:center;gap:8px;margin-top:13px;flex-wrap:wrap}
-.dep-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mu)}
-.db{padding:5px 14px;border-radius:20px;border:1px solid var(--bd);font-size:11px;font-weight:500;
-  cursor:pointer;background:transparent;color:var(--mu);font-family:'DM Sans',sans-serif;transition:all .15s}
+.dropz{width:100%;min-height:200px;background:var(--bg);border:2px dashed var(--bd);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:all .25s;padding:12px}
+.dropz:hover,.dropz.drag{border-color:var(--red);background:rgba(201,67,42,.04)}
+.dropz.has{border-style:solid;border-color:var(--bd2);cursor:default}
+#pimg{max-width:100%;max-height:320px;object-fit:contain;border-radius:8px;display:none}
+.clri{margin-top:10px;padding:6px 14px;background:transparent;border:1px solid var(--bd2);border-radius:6px;color:var(--mu2);font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif}
+.depr{display:flex;align-items:center;gap:8px;margin-top:13px;flex-wrap:wrap}
+.dplb{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--mu)}
+.db{padding:5px 14px;border-radius:20px;border:1px solid var(--bd);font-size:11px;font-weight:500;cursor:pointer;background:transparent;color:var(--mu);font-family:'DM Sans',sans-serif;transition:all .15s}
 .db.on,.db:hover{background:var(--red);color:#fff;border-color:var(--red)}
-
-/* ANALYZE BTN */
-.an-btn{width:100%;margin-top:14px;padding:16px;background:var(--red);color:#fff;
-  border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;
-  letter-spacing:2px;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;
-  justify-content:center;gap:10px;transition:all .25s}
-.an-btn:hover:not(:disabled){background:var(--red2);transform:translateY(-1px);
-  box-shadow:0 6px 24px rgba(201,67,42,.3)}
-.an-btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
-.spin{width:14px;height:14px;border:2px solid rgba(255,255,255,.25);
-  border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}
+.anbtn{width:100%;margin-top:14px;padding:16px;background:var(--red);color:#fff;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:all .25s}
+.anbtn:hover:not(:disabled){background:var(--red2);transform:translateY(-1px);box-shadow:0 6px 24px rgba(201,67,42,.3)}
+.anbtn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.spin{width:14px;height:14px;border:2px solid rgba(255,255,255,.25);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;display:none}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* ERROR */
-.err-box{background:rgba(201,67,42,.1);border:1px solid rgba(201,67,42,.3);
-  border-radius:10px;padding:13px 16px;font-size:12px;color:#e87a6a;
-  line-height:1.7;margin-top:10px;white-space:pre-wrap;word-break:break-word;display:none}
-.disc{font-size:11px;color:rgba(201,67,42,.6);margin-top:10px;display:flex;gap:7px;line-height:1.6}
-
-/* ── TEASER RESULT ── */
+.ebox{background:rgba(201,67,42,.1);border:1px solid rgba(201,67,42,.3);border-radius:10px;padding:13px 16px;font-size:12px;color:#e87a6a;line-height:1.7;margin-top:10px;white-space:pre-wrap;word-break:break-word;display:none}
+.disc{font-size:11px;color:rgba(201,67,42,.5);margin-top:10px;display:flex;gap:7px;line-height:1.6}
 #result{display:none;margin-top:28px}
-.res-ey{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:3px;
-  text-transform:uppercase;color:var(--gold);margin-bottom:18px}
-.res-ey::after{content:'';flex:1;height:1px;background:var(--bd)}
-
-/* Type banner */
-.type-hero{background:linear-gradient(135deg,var(--s2),#1a1130);border:1px solid var(--bd);
-  border-radius:14px;padding:26px 22px;margin-bottom:12px;display:flex;align-items:center;gap:20px}
-.t-emoji{font-size:50px;flex-shrink:0}
-.t-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;margin-bottom:5px;line-height:1.1}
-.t-desc{font-size:13px;color:var(--mu2);line-height:1.6;margin-bottom:12px}
-.conf-row{display:flex;align-items:center;gap:10px}
-.conf-bar{flex:1;height:4px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
-.conf-fill{height:100%;background:var(--gold);border-radius:2px;width:0%;transition:width 1.2s ease}
-.conf-lbl{font-size:11px;color:var(--mu);white-space:nowrap}
-
-/* Scores */
-.sc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
-.sc-card{background:var(--s1);border:1px solid var(--bd);border-radius:10px;padding:12px;text-align:center}
-.sc-lbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mu);margin-bottom:6px}
-.sc-num{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700}
-.sc-unit{font-size:10px;color:var(--mu);margin-bottom:6px}
-.bar-bg{height:3px;background:var(--bd);border-radius:2px;overflow:hidden}
-.bar-fill{height:100%;border-radius:2px;width:0%;transition:width 1.3s ease}
-
-/* Traits */
-.tr-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
-.tr-card{background:var(--s1);border:1px solid var(--bd);border-radius:10px;padding:14px}
-.tr-lbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mu);margin-bottom:5px}
-.tr-val{font-size:13px;font-weight:500;line-height:1.5;margin-bottom:8px}
-
-/* Sections */
-.an-card{background:var(--s1);border:1px solid var(--bd);border-radius:12px;
-  padding:18px 20px;margin-bottom:8px;position:relative}
-.an-card-tit{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;
-  margin-bottom:10px;display:flex;align-items:center;gap:8px}
-.an-card p{font-size:13px;line-height:1.85;color:#c4bcc8;margin:0}
-.an-card ul{padding-left:18px;margin:0}
-.an-card li{font-size:13px;line-height:1.85;color:#c4bcc8;margin-bottom:4px}
-
-/* ── TEASER BLUR OVERLAY ── */
-.teaser-wrap{position:relative;margin-bottom:8px}
-.teaser-blur{
-  position:relative;overflow:hidden;border-radius:12px;
-}
-.teaser-blur .an-card{margin-bottom:0;filter:blur(4px);user-select:none;pointer-events:none}
-.teaser-overlay{
-  position:absolute;inset:0;
-  background:linear-gradient(to bottom,rgba(8,7,11,0) 0%,rgba(8,7,11,.85) 40%,rgba(8,7,11,.97) 100%);
-  display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
-  padding:24px;border-radius:12px;border:1px solid var(--bd);
-}
-.teaser-lock{font-size:32px;margin-bottom:10px}
-.teaser-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;
-  margin-bottom:8px;text-align:center;color:var(--text)}
-.teaser-sub{font-size:12px;color:var(--mu2);text-align:center;line-height:1.6;margin-bottom:16px;max-width:300px}
-.teaser-btn{
-  padding:12px 28px;background:linear-gradient(135deg,var(--gold),#e8c060);
-  color:#1a1200;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;
-  font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
-  cursor:pointer;transition:all .2s}
-.teaser-btn:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(212,168,67,.3)}
-.teaser-note{font-size:10px;color:var(--mu);margin-top:8px}
-
-/* COMING SOON */
-.coming-soon-box{
-  background:linear-gradient(135deg,var(--s2),#1a1130);
-  border:1px solid var(--gold);border-radius:14px;padding:28px 24px;
-  text-align:center;margin-top:8px;
-}
-.cs-icon{font-size:40px;margin-bottom:12px}
-.cs-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;
-  color:var(--gold);margin-bottom:8px}
-.cs-sub{font-size:13px;color:var(--mu2);line-height:1.7;max-width:400px;margin:0 auto 16px}
-.cs-features{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:16px}
-.cs-feat{background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.2);
-  border-radius:6px;padding:5px 12px;font-size:11px;color:var(--gold)}
-
-/* RESET */
-.reset-btn{display:block;margin:22px auto 0;padding:10px 26px;background:transparent;
-  border:1px solid var(--bd);border-radius:6px;font-family:'DM Sans',sans-serif;
-  font-size:12px;color:var(--mu);cursor:pointer}
-.reset-btn:hover{border-color:var(--text);color:var(--text)}
-
-/* HISTORY */
-.hist-section{margin-top:40px;display:none}
-.hist-card{background:var(--s1);border:1px solid var(--bd);border-radius:10px;
-  padding:14px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;
-  margin-bottom:8px;transition:border-color .2s}
-.hist-card:hover{border-color:var(--bd2)}
-.hist-emoji{font-size:26px;flex-shrink:0}
-.hist-name{font-size:14px;font-weight:600;margin-bottom:2px}
-.hist-date{font-size:11px;color:var(--mu)}
-.hist-conf{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--gold);flex-shrink:0}
-.hist-del{padding:5px 10px;background:transparent;border:1px solid var(--bd);
-  border-radius:5px;color:var(--mu);font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;flex-shrink:0}
-.hist-del:hover{border-color:var(--red);color:var(--red)}
-.hist-empty{background:var(--s1);border:1px dashed var(--bd);border-radius:10px;
-  padding:32px;text-align:center;color:var(--mu);font-size:13px}
-
-footer{position:relative;z-index:1;border-top:1px solid var(--bd);padding:26px 24px;
-  text-align:center;font-size:11px;color:var(--mu);letter-spacing:1px;line-height:2.2}
+.rey{display:flex;align-items:center;gap:12px;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.rey::after{content:'';flex:1;height:1px;background:var(--bd)}
+.thero{background:linear-gradient(135deg,var(--s2),#1a1130);border:1px solid var(--bd);border-radius:14px;padding:26px 22px;margin-bottom:12px;display:flex;align-items:center;gap:20px}
+.temj{font-size:52px;flex-shrink:0}
+.tnam{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;margin-bottom:5px;line-height:1.1}
+.tdsc{font-size:13px;color:var(--mu2);line-height:1.6;margin-bottom:12px}
+.crow{display:flex;align-items:center;gap:10px}
+.cbar{flex:1;height:4px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.cfil{height:100%;background:var(--gold);border-radius:2px;width:0%;transition:width 1.2s ease}
+.clbl{font-size:11px;color:var(--mu);white-space:nowrap}
+.scg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.scc{background:var(--s1);border:1px solid var(--bd);border-radius:10px;padding:12px;text-align:center}
+.scl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mu);margin-bottom:6px}
+.scn{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700}
+.scu{font-size:10px;color:var(--mu);margin-bottom:6px}
+.bbg{height:3px;background:var(--bd);border-radius:2px;overflow:hidden}
+.bfi{height:100%;border-radius:2px;width:0%;transition:width 1.3s ease}
+.trg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.trc{background:var(--s1);border:1px solid var(--bd);border-radius:10px;padding:14px}
+.trl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mu);margin-bottom:5px}
+.trv{font-size:13px;font-weight:500;line-height:1.5;margin-bottom:8px}
+.anc{background:var(--s1);border:1px solid var(--bd);border-radius:12px;padding:18px 20px;margin-bottom:8px}
+.act{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.anc p{font-size:13px;line-height:1.85;color:#c4bcc8;margin:0}
+.anc ul{padding-left:18px;margin:0}
+.anc li{font-size:13px;line-height:1.85;color:#c4bcc8;margin-bottom:4px}
+.tsec{position:relative;margin-top:8px;border-radius:14px;overflow:hidden}
+.tblur{filter:blur(5px);user-select:none;pointer-events:none}
+.tblur .anc{margin-bottom:8px}
+.pwo{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(8,7,11,0) 0%,rgba(8,7,11,.75) 30%,rgba(8,7,11,.98) 60%,rgba(8,7,11,1) 100%);display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:32px 24px 36px}
+.pwlk{font-size:38px;margin-bottom:12px;animation:flt 3s ease-in-out infinite}
+@keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.pwtit{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;margin-bottom:8px;text-align:center}
+.pwsub{font-size:13px;color:var(--mu2);text-align:center;line-height:1.7;margin-bottom:18px;max-width:340px}
+.pwfs{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:18px}
+.pwf{background:rgba(212,168,67,.1);border:1px solid rgba(212,168,67,.2);border-radius:6px;padding:5px 12px;font-size:11px;color:var(--gold)}
+.pwbtn{padding:14px 36px;background:linear-gradient(135deg,var(--gold),#e8c060);color:#1a1200;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .2s;margin-bottom:10px}
+.pwbtn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(212,168,67,.35)}
+.pwnot{font-size:11px;color:var(--mu);text-align:center}
+.rbtn{display:block;margin:22px auto 0;padding:10px 26px;background:transparent;border:1px solid var(--bd);border-radius:6px;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--mu);cursor:pointer}
+.rbtn:hover{border-color:var(--text);color:var(--text)}
+.hsec{margin-top:40px;display:none}
+.hcard{background:var(--s1);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;margin-bottom:8px;transition:border-color .2s}
+.hcard:hover{border-color:var(--bd2)}
+.hemj{font-size:26px;flex-shrink:0}
+.hnam{font-size:14px;font-weight:600;margin-bottom:2px}
+.hdat{font-size:11px;color:var(--mu)}
+.hcon{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--gold);flex-shrink:0}
+.hdel{padding:5px 10px;background:transparent;border:1px solid var(--bd);border-radius:5px;color:var(--mu);font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;flex-shrink:0}
+.hdel:hover{border-color:var(--red);color:var(--red)}
+footer{position:relative;z-index:1;border-top:1px solid var(--bd);padding:26px 24px;text-align:center;font-size:11px;color:var(--mu);letter-spacing:1px;line-height:2.2}
 footer strong{letter-spacing:4px;color:var(--mu2)}
-
-@media(max-width:640px){
-  nav{padding:0 16px}
-  .sc-grid{grid-template-columns:1fr 1fr}
-  .tr-grid{grid-template-columns:1fr}
-  .type-hero{flex-direction:column;text-align:center}
-}
+@media(max-width:640px){nav{padding:0 16px}.logo-name{font-size:14px;letter-spacing:3px}.scg{grid-template-columns:1fr 1fr}.trg{grid-template-columns:1fr}.thero{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
-
 <nav>
   <div class="logo">
     <div class="logo-mark">∿</div>
@@ -253,571 +141,387 @@ footer strong{letter-spacing:4px;color:var(--mu2)}
       <button class="lb on" onclick="setLang('tr',this)">TR</button>
       <button class="lb" onclick="setLang('en',this)">EN</button>
     </div>
-    <button onclick="toggleHist()" id="histBtn"
-      style="padding:6px 12px;background:transparent;border:1px solid var(--bd2);border-radius:7px;
-      font-family:'DM Sans',sans-serif;font-size:11px;color:var(--mu2);cursor:pointer">
-      📋 <span id="histBtnTxt">Geçmiş</span>
-    </button>
+    <button class="hnb" onclick="toggleHist()">📋 <span id="hbt">Geçmiş</span></button>
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
-  <div class="hero-chip"><span class="chip-dot"></span><span id="h-chip">Yapay Zeka Destekli İlişki Analizi</span></div>
-  <div class="hero-t1">AU</div>
-  <div class="hero-t2">REVIAAI</div>
-  <p class="hero-sub" id="h-sub">Ayrılamadın. Şimdi nedenini anlayacaksın.</p>
-  <button class="hero-btn" id="h-cta" onclick="document.getElementById('app').scrollIntoView({behavior:'smooth'})">Analizimi Başlat</button>
-  <div class="pills-row" id="h-pills"></div>
+  <div class="hero-chip"><span class="chip-dot"></span><span id="hchip">Yapay Zeka Destekli İlişki Analizi</span></div>
+  <div class="ht1">AU</div>
+  <div class="ht2">REVIAAI</div>
+  <p class="hsub" id="hsub">Ayrılamadın. Şimdi nedenini anlayacaksın.</p>
+  <button class="hbtn" id="hcta" onclick="document.getElementById('app').scrollIntoView({behavior:'smooth'})">Analizimi Başlat</button>
+  <div class="pills" id="hpills"></div>
 </div>
 
-<!-- MAIN -->
 <div class="main">
   <div id="app">
-    <div class="ey" id="sec-lbl">Analizi Başlat</div>
-
-    <!-- Free counter -->
-    <div class="free-ctr">
-      <div style="display:flex;align-items:center">
-        <div class="fc-dots">
-          <div class="fc-dot" id="fd0"></div>
-          <div class="fc-dot" id="fd1"></div>
-          <div class="fc-dot" id="fd2"></div>
-        </div>
-        <span class="fc-txt" id="fc-txt">3 ücretsiz analiz hakkın var</span>
-      </div>
-      <span style="font-size:11px;color:var(--gold);font-family:'DM Sans',sans-serif">✨ Yakında Premium</span>
+    <div class="ey" id="slbl">Analizi Başlat</div>
+    <div class="ibox">
+      <span style="font-size:18px">💬</span>
+      <span id="itxt">Tüm WhatsApp konuşmanı veya ekran görüntüsünü yükle — yapay zeka ilişki örüntülerini analiz etsin.</span>
     </div>
-
-    <!-- Tabs -->
-    <div class="i-tabs">
-      <button class="i-tab on" id="tab-t" onclick="switchTab('text')">💬 <span id="tab-t-lbl">Metin Yapıştır</span></button>
-      <button class="i-tab" id="tab-i" onclick="switchTab('image')">📸 <span id="tab-i-lbl">Ekran Görüntüsü</span></button>
+    <div class="itabs">
+      <button class="itab on" id="tbt" onclick="switchTab('text')">💬 <span id="ttl">Metin Yapıştır</span></button>
+      <button class="itab" id="tbi" onclick="switchTab('image')">📸 <span id="til">Ekran Görüntüsü</span></button>
     </div>
-
-    <!-- Form -->
-    <div class="form-card">
-      <div class="form-top">
-        <div class="form-top-tit" id="form-tit">Mesajları Yapıştır</div>
-        <div class="char-ct" id="char-ct">0 kr</div>
+    <div class="fcard">
+      <div class="ftop">
+        <div class="ftit" id="ftit">Mesajları Yapıştır</div>
+        <div class="cct" id="cct">0 karakter</div>
       </div>
-      <div class="form-bod">
-        <!-- Text panel -->
-        <div id="text-panel">
-          <textarea id="msg-input" oninput="onType(this)"
-            placeholder="Analiz etmek istediğin mesajları buraya yapıştır...&#10;&#10;Örnek: WhatsApp konuşması, e-posta yazışması, sosyal medya mesajları."></textarea>
+      <div class="fbod">
+        <div id="tpan">
+          <textarea id="minp" oninput="onType(this)"
+            placeholder="Tüm WhatsApp konuşmanı buraya yapıştır...&#10;&#10;Ne kadar çok mesaj ekersen analiz o kadar doğru olur.&#10;Kişi isimlerini değiştirebilirsin."></textarea>
         </div>
-        <!-- Image panel -->
-        <div id="img-panel" style="display:none">
-          <div class="drop-z" id="drop-z"
-            onclick="if(!imgLoaded)document.getElementById('file-inp').click()"
+        <div id="ipan" style="display:none">
+          <div class="dropz" id="dropz"
+            onclick="if(!imgL)document.getElementById('finp').click()"
             ondragover="onDrag(event,true)" ondragleave="onDrag(event,false)" ondrop="onDrop(event)">
-            <input type="file" id="file-inp" accept="image/*" style="display:none" onchange="onFile(event)">
-            <div id="up-prompt" style="text-align:center;padding:32px 24px">
-              <div style="font-size:36px;opacity:.4;margin-bottom:10px">📲</div>
-              <div style="font-size:14px;font-weight:600;color:var(--mu2);margin-bottom:6px" id="drop-tit">Ekran Görüntüsü Yükle</div>
-              <div style="font-size:12px;color:var(--mu);line-height:1.6;max-width:260px;margin:0 auto 14px" id="drop-sub">Sürükle bırak veya tıkla — JPG, PNG</div>
-              <button style="padding:7px 16px;background:transparent;border:1px solid var(--bd2);
-                border-radius:6px;color:var(--mu2);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif"
-                id="drop-btn" onclick="event.stopPropagation();document.getElementById('file-inp').click()">
-                📂 Dosya Seç
-              </button>
+            <input type="file" id="finp" accept="image/*" style="display:none" onchange="onFile(event)">
+            <div id="upro" style="text-align:center;padding:24px">
+              <div style="font-size:40px;opacity:.35;margin-bottom:12px">📲</div>
+              <div style="font-size:14px;font-weight:600;color:var(--mu2);margin-bottom:6px" id="dtit">Ekran Görüntüsü Yükle</div>
+              <div style="font-size:12px;color:var(--mu);line-height:1.6;max-width:260px;margin:0 auto 14px" id="dsub">WhatsApp, Instagram, iMessage — JPG, PNG</div>
+              <button onclick="event.stopPropagation();document.getElementById('finp').click()"
+                style="padding:8px 18px;background:transparent;border:1px solid var(--bd2);border-radius:6px;color:var(--mu2);font-size:12px;cursor:pointer;font-family:'DM Sans',sans-serif"
+                id="dbtn">📂 Dosya Seç</button>
             </div>
-            <img id="prev-img" src="" alt="">
-            <button class="clr-img" id="clr-img" style="display:none" onclick="clearImg(event)">Görseli Değiştir</button>
+            <img id="pimg" src="" alt="">
+            <button class="clri" id="clri" style="display:none" onclick="clearImg(event)">🔄 Değiştir</button>
           </div>
         </div>
-
-        <!-- Depth -->
-        <div class="dep-row">
-          <span class="dep-lbl" id="dep-lbl">Derinlik</span>
+        <div class="depr">
+          <span class="dplb" id="deplbl">Derinlik</span>
           <button class="db on" onclick="setDep(this,'quick')" id="dq">⚡ Hızlı</button>
           <button class="db" onclick="setDep(this,'deep')" id="dd">🔬 Derin</button>
           <button class="db" onclick="setDep(this,'expert')" id="de">🧠 Uzman</button>
         </div>
-
-        <button class="an-btn" id="an-btn" onclick="analyze()">
+        <button class="anbtn" id="anb" onclick="analyze()">
           <div class="spin" id="spin"></div>
-          <span id="an-btn-txt">∿ ANALİZİ BAŞLAT</span>
+          <span id="anbt">∿ ANALİZİ BAŞLAT</span>
         </button>
       </div>
     </div>
+    <div class="ebox" id="ebox"></div>
+    <div class="disc"><span>⚠</span><span id="dtxt">Bu uygulama farkındalık amaçlıdır. Klinik tanı yerine geçmez.</span></div>
 
-    <div class="err-box" id="err-box"></div>
-    <div class="disc"><span>⚠</span><span id="disc-txt">Bu uygulama farkındalık amaçlıdır. Klinik tanı yerine geçmez.</span></div>
-
-    <!-- RESULT -->
     <div id="result">
-      <div class="res-ey" id="res-ey">Analiz Sonucu</div>
-
-      <!-- Type banner - always visible -->
-      <div class="type-hero">
-        <div class="t-emoji" id="r-emoji">🔍</div>
+      <div class="rey" id="rey">Analiz Sonucu</div>
+      <div class="thero">
+        <div class="temj" id="remj">🔍</div>
         <div style="flex:1">
-          <div class="t-name" id="r-name">—</div>
-          <div class="t-desc" id="r-desc"></div>
-          <div class="conf-row">
-            <div class="conf-bar"><div class="conf-fill" id="conf-fill"></div></div>
-            <div class="conf-lbl" id="conf-lbl">—</div>
+          <div class="tnam" id="rnam">—</div>
+          <div class="tdsc" id="rdsc"></div>
+          <div class="crow">
+            <div class="cbar"><div class="cfil" id="cfil"></div></div>
+            <div class="clbl" id="clbl">—</div>
           </div>
         </div>
       </div>
-
-      <!-- Scores - always visible -->
-      <div class="sc-grid" id="sc-grid"></div>
-
-      <!-- Traits - always visible -->
-      <div class="tr-grid" id="tr-grid"></div>
-
-      <!-- First 2 sections - visible -->
-      <div id="an-visible"></div>
-
-      <!-- Remaining sections - BLURRED with teaser -->
-      <div class="teaser-wrap" id="teaser-wrap" style="display:none">
-        <div class="teaser-blur">
-          <div id="an-blurred"></div>
-        </div>
-        <div class="teaser-overlay">
-          <div class="teaser-lock">🔒</div>
-          <div class="teaser-title" id="teaser-title">Tam Analizi Gör</div>
-          <div class="teaser-sub" id="teaser-sub">İlişki dinamikleri, uyarı işaretleri ve kişisel tavsiyeler seni bekliyor.</div>
-          <button class="teaser-btn" id="teaser-btn" onclick="showTeaser()">✨ Tamamını Gör — Yakında Ücretsiz</button>
-          <div class="teaser-note" id="teaser-note">Şu an beta aşamasında — tam analiz yakında aktif olacak</div>
+      <div class="scg" id="scg"></div>
+      <div class="trg" id="trg"></div>
+      <div id="anfree"></div>
+      <div class="tsec" id="tsec" style="display:none">
+        <div class="tblur" id="anlocked"></div>
+        <div class="pwo">
+          <div class="pwlk">🔒</div>
+          <div class="pwtit" id="pwtit">Tam Analizi Görmek İster misin?</div>
+          <div class="pwsub" id="pwsub">İlişki dinamikleri, uyarı işaretleri ve kişisel tavsiyeler seni bekliyor.</div>
+          <div class="pwfs">
+            <span class="pwf">❤️ İlişki Dinamikleri</span>
+            <span class="pwf">⚠️ Uyarı İşaretleri</span>
+            <span class="pwf">💡 Kişisel Tavsiyeler</span>
+            <span class="pwf">📊 Tam Rapor</span>
+          </div>
+          <button class="pwbtn" id="pwbtn" onclick="onPW()">✨ Premium'a Geç — Yakında</button>
+          <div class="pwnot" id="pwnot">🚀 Beta döneminde — premium çok yakında aktif olacak</div>
         </div>
       </div>
-
-      <!-- Coming soon box -->
-      <div class="coming-soon-box" id="coming-soon" style="display:none">
-        <div class="cs-icon">🚀</div>
-        <div class="cs-title" id="cs-title">Yakında Daha Fazlası</div>
-        <div class="cs-sub" id="cs-sub">Tam rapor, PDF indirme, terapist önerileri ve çok daha fazlası geliyor.</div>
-        <div class="cs-features">
-          <span class="cs-feat">📊 Tam Rapor</span>
-          <span class="cs-feat">📄 PDF İndir</span>
-          <span class="cs-feat">💬 Sınırsız Analiz</span>
-          <span class="cs-feat">🧠 Uzman Modu</span>
-          <span class="cs-feat">📱 Mobil Uygulama</span>
-        </div>
-      </div>
-
-      <button class="reset-btn" onclick="resetApp()" id="reset-btn">↩ Yeni Analiz</button>
+      <button class="rbtn" onclick="resetApp()" id="rbtn">↩ Yeni Analiz</button>
     </div>
   </div>
 
-  <!-- History -->
-  <div class="hist-section" id="hist-section">
-    <div class="ey" id="hist-ey">Analiz Geçmişi</div>
-    <div id="hist-content"></div>
+  <div class="hsec" id="hsec">
+    <div class="ey" id="hey">Analiz Geçmişi</div>
+    <div id="hcon"></div>
   </div>
 </div>
 
 <footer>
   <strong>AUREVIAAI</strong><br>
-  <span id="foot-txt">Kendini Çöz · Kendini Kurtar · Yapay Zeka Destekli İlişki Analizi</span>
+  <span id="ftxt">Kendini Çöz · Kendini Kurtar · Yapay Zeka Destekli İlişki Analizi</span>
 </footer>
 
 <script>
-// ══════════════════════════════════
-// STATE
-// ══════════════════════════════════
-let LANG='tr', DEPTH='quick', MODE='text';
-let IMG_B64=null, imgLoaded=false;
-let FREE=parseInt(localStorage.getItem('aai_f')??'3');
-let HIST=JSON.parse(localStorage.getItem('aai_h')||'[]');
-let histOpen=false;
+var LANG='tr',DEPTH='quick',MODE='text',IMG_B64=null,imgL=false;
+var HIST=JSON.parse(localStorage.getItem('aai_h')||'[]');
+var histOpen=false;
 
-// ══════════════════════════════════
-// TRANSLATIONS
-// ══════════════════════════════════
-const T={
+var T={
 tr:{
   chip:'Yapay Zeka Destekli İlişki Analizi',
   sub:'Ayrılamadın. Şimdi nedenini anlayacaksın.',
   cta:'Analizimi Başlat',
   pills:['🪞 Narsistik','🌊 Borderline','🎭 Histriyonik','💛 Duygusal Bağımlı','🧊 Kaçınmacı','🔗 Bağımlı','😶 Pasif Agresif','✅ Sağlıklı'],
-  secLbl:'Analizi Başlat',
-  fcTxt:(n)=>`${n} ücretsiz analiz hakkın var`,
-  tabT:'Metin Yapıştır', tabI:'Ekran Görüntüsü',
-  formTit:'Mesajları Yapıştır', imgTit:'Ekran Görüntüsü Yükle',
-  ph:'Analiz etmek istediğin mesajları buraya yapıştır...\n\nÖrnek: WhatsApp konuşması, e-posta yazışması, sosyal medya mesajları.',
-  dropTit:'Ekran Görüntüsü Yükle', dropSub:'Sürükle bırak veya tıkla — JPG, PNG',
-  depLbl:'Derinlik', dq:'⚡ Hızlı', dd:'🔬 Derin', de:'🧠 Uzman',
-  anBtn:'∿ ANALİZİ BAŞLAT', anLoad:'Analiz yapılıyor...',
-  disc:'Bu uygulama farkındalık amaçlıdır. Klinik tanı yerine geçmez.',
-  resEy:'Analiz Sonucu', conf:'güven',
-  resetBtn:'↩ Yeni Analiz',
-  histEy:'Analiz Geçmişi', histBtn:'Geçmiş',
-  histEmpty:'Henüz analiz geçmişin yok.',
-  histDel:'Sil', histClr:'Temizle',
-  teaserTitle:'Tam Analizi Gör',
-  teaserSub:'İlişki dinamikleri, uyarı işaretleri ve kişisel tavsiyeler seni bekliyor.',
-  teaserBtn:'✨ Tamamını Gör — Yakında Ücretsiz',
-  teaserNote:'Şu an beta aşamasında — tam analiz yakında aktif olacak',
-  csTitle:'Yakında Daha Fazlası',
-  csSub:'Tam rapor, PDF indirme, terapist önerileri ve çok daha fazlası geliyor.',
-  foot:'Kendini Çöz · Kendini Kurtar · Yapay Zeka Destekli İlişki Analizi',
-  errShort:'Lütfen en az 20 karakter girin.',
-  errImg:'Lütfen önce görsel yükleyin.',
+  slbl:'Analizi Başlat',
+  itxt:'Tüm WhatsApp konuşmanı veya ekran görüntüsünü yükle — yapay zeka ilişki örüntülerini analiz etsin.',
+  ttl:'Metin Yapıştır',til:'Ekran Görüntüsü',
+  ftit:'Mesajları Yapıştır',iftit:'Ekran Görüntüsü Yükle',
+  ph:'Tüm WhatsApp konuşmanı buraya yapıştır...\n\nNe kadar çok mesaj ekersen analiz o kadar doğru olur.\nKişi isimlerini değiştirebilirsin.',
+  dtit:'Ekran Görüntüsü Yükle',dsub:'WhatsApp, Instagram, iMessage — JPG, PNG',dbtn:'📂 Dosya Seç',
+  deplbl:'Derinlik',dq:'⚡ Hızlı',dd:'🔬 Derin',de:'🧠 Uzman',
+  anbt:'∿ ANALİZİ BAŞLAT',anld:'Analiz yapılıyor...',
+  dtxt:'Bu uygulama farkındalık amaçlıdır. Klinik tanı yerine geçmez.',
+  rey:'Analiz Sonucu',conf:'güven',
+  rbtn:'↩ Yeni Analiz',
+  hbt:'Geçmiş',hey:'Analiz Geçmişi',
+  hemp:'Henüz analiz geçmişin yok.',
+  hdel:'Sil',hclr:'Temizle',
+  pwtit:'Tam Analizi Görmek İster misin?',
+  pwsub:'İlişki dinamikleri, uyarı işaretleri ve kişisel tavsiyeler seni bekliyor.',
+  pwbtn:'✨ Premium\'a Geç — Yakında',
+  pwnot:'🚀 Beta döneminde — premium çok yakında aktif olacak',
+  ftxt:'Kendini Çöz · Kendini Kurtar · Yapay Zeka Destekli İlişki Analizi',
+  errS:'Lütfen en az 30 karakter girin.',
+  errI:'Lütfen önce görsel yükleyin.',
   sc:['Narsizm','Borderline','Kaygı','Empati','Kontrol','Duygusallık'],
   scC:['#c9432a','#7c3aed','#c4673a','#3a9e6a','#2563eb','#d4a843'],
-  di:{
-    quick:'Kısa ve öz analiz yap. Her bölüm 2-3 cümle.',
-    deep:'Kapsamlı ve detaylı analiz yap.',
-    expert:'Uzman psikolog gibi analiz et. DSM-5 referans al.'
-  },
-  tone:'Yanıtını TAMAMEN Türkçe ver. Tüm başlıklar ve içerik Türkçe olmalı.',
+  di:{quick:'Kısa ve öz analiz. Her bölüm 2-3 cümle.',deep:'Kapsamlı ve detaylı analiz.',expert:'Uzman psikolog gibi analiz et. DSM-5 referans al.'},
+  tone:'Yanıtını TAMAMEN Türkçe ver.'
 },
 en:{
   chip:'AI-Powered Relationship Analysis',
   sub:"You couldn't leave. Now you'll understand why.",
   cta:'Start My Analysis',
   pills:['🪞 Narcissistic','🌊 Borderline','🎭 Histrionic','💛 Emotionally Dependent','🧊 Avoidant','🔗 Dependent','😶 Passive Aggressive','✅ Healthy'],
-  secLbl:'Start Analysis',
-  fcTxt:(n)=>`${n} free analyses left`,
-  tabT:'Paste Text', tabI:'Screenshot',
-  formTit:'Paste Messages', imgTit:'Upload Screenshot',
-  ph:'Paste the messages you want to analyze...\n\nExample: WhatsApp chats, emails, social media messages.',
-  dropTit:'Upload Screenshot', dropSub:'Drag & drop or click — JPG, PNG',
-  depLbl:'Depth', dq:'⚡ Quick', dd:'🔬 Deep', de:'🧠 Expert',
-  anBtn:'∿ START ANALYSIS', anLoad:'Analyzing...',
-  disc:'This app is for awareness only. Not a clinical diagnosis.',
-  resEy:'Analysis Result', conf:'confidence',
-  resetBtn:'↩ New Analysis',
-  histEy:'Analysis History', histBtn:'History',
-  histEmpty:'No analysis history yet.',
-  histDel:'Delete', histClr:'Clear All',
-  teaserTitle:'See Full Analysis',
-  teaserSub:'Relationship dynamics, warning signs and personal guidance are waiting for you.',
-  teaserBtn:'✨ See Everything — Coming Soon Free',
-  teaserNote:'Currently in beta — full analysis coming soon',
-  csTitle:'More Coming Soon',
-  csSub:'Full reports, PDF downloads, therapist recommendations and much more.',
-  foot:'Untangle Your Bonds · Find Your Way · AI-Powered Relationship Analysis',
-  errShort:'Please enter at least 20 characters.',
-  errImg:'Please upload an image first.',
+  slbl:'Start Analysis',
+  itxt:'Upload your full WhatsApp conversation or screenshot — AI will analyze relationship patterns.',
+  ttl:'Paste Text',til:'Screenshot',
+  ftit:'Paste Messages',iftit:'Upload Screenshot',
+  ph:'Paste your full WhatsApp conversation here...\n\nThe more messages, the more accurate the analysis.\nYou can change person names.',
+  dtit:'Upload Screenshot',dsub:'WhatsApp, Instagram, iMessage — JPG, PNG',dbtn:'📂 Select File',
+  deplbl:'Depth',dq:'⚡ Quick',dd:'🔬 Deep',de:'🧠 Expert',
+  anbt:'∿ START ANALYSIS',anld:'Analyzing...',
+  dtxt:'This app is for awareness only. Not a clinical diagnosis.',
+  rey:'Analysis Result',conf:'confidence',
+  rbtn:'↩ New Analysis',
+  hbt:'History',hey:'Analysis History',
+  hemp:'No analysis history yet.',
+  hdel:'Delete',hclr:'Clear All',
+  pwtit:'Want to See the Full Analysis?',
+  pwsub:'Relationship dynamics, warning signs and personal guidance await you.',
+  pwbtn:'✨ Go Premium — Coming Soon',
+  pwnot:'🚀 Free during beta — premium launching very soon',
+  ftxt:'Untangle Your Bonds · Find Your Way · AI-Powered Relationship Analysis',
+  errS:'Please enter at least 30 characters.',
+  errI:'Please upload an image first.',
   sc:['Narcissism','Borderline','Anxiety','Empathy','Control','Emotionality'],
   scC:['#c9432a','#7c3aed','#c4673a','#3a9e6a','#2563eb','#d4a843'],
-  di:{
-    quick:'Brief and concise. 2-3 sentences per section.',
-    deep:'Comprehensive and detailed analysis.',
-    expert:'Like an expert psychologist. Reference DSM-5.'
-  },
-  tone:'Respond ENTIRELY in English.',
+  di:{quick:'Brief and concise. 2-3 sentences per section.',deep:'Comprehensive and detailed.',expert:'Like an expert psychologist. Reference DSM-5.'},
+  tone:'Respond ENTIRELY in English.'
 }};
 
-// ══════════════════════════════════
-// HELPERS
-// ══════════════════════════════════
-const g=id=>document.getElementById(id);
-const tx=(id,v)=>{const e=g(id);if(e)e.textContent=v};
-const ih=(id,v)=>{const e=g(id);if(e)e.innerHTML=v};
+var g=function(id){return document.getElementById(id)};
+var tx=function(id,v){var e=g(id);if(e)e.textContent=v};
+var ih=function(id,v){var e=g(id);if(e)e.innerHTML=v};
 
-// ══════════════════════════════════
-// LANG
-// ══════════════════════════════════
 function setLang(l,btn){
   LANG=l;
-  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('on'));
+  document.querySelectorAll('.lb').forEach(function(b){b.classList.remove('on')});
   btn.classList.add('on');
   applyLang();
 }
+
 function applyLang(){
-  const t=T[LANG];
-  tx('h-chip',t.chip); tx('h-sub',t.sub); tx('h-cta',t.cta);
-  ih('h-pills',t.pills.map(p=>`<span class="pill">${p}</span>`).join(''));
-  tx('sec-lbl',t.secLbl);
-  ih('fc-txt',t.fcTxt(FREE));
-  tx('tab-t-lbl',t.tabT); tx('tab-i-lbl',t.tabI);
-  tx('form-tit',MODE==='text'?t.formTit:t.imgTit);
-  g('msg-input').placeholder=t.ph;
-  tx('drop-tit',t.dropTit); tx('drop-sub',t.dropSub);
-  tx('dep-lbl',t.depLbl); tx('dq',t.dq); tx('dd',t.dd); tx('de',t.de);
-  if(!g('an-btn').disabled) tx('an-btn-txt',t.anBtn);
-  tx('disc-txt',t.disc);
-  tx('res-ey',t.resEy); tx('reset-btn',t.resetBtn);
-  tx('hist-ey',t.histEy);
-  tx('histBtnTxt',t.histBtn+(HIST.length?` (${HIST.length})`:''));
-  tx('teaser-title',t.teaserTitle); tx('teaser-sub',t.teaserSub);
-  tx('teaser-btn',t.teaserBtn); tx('teaser-note',t.teaserNote);
-  tx('cs-title',t.csTitle); tx('cs-sub',t.csSub);
-  tx('foot-txt',t.foot);
-  updateFC();
+  var t=T[LANG];
+  tx('hchip',t.chip);tx('hsub',t.sub);tx('hcta',t.cta);
+  ih('hpills',t.pills.map(function(p){return '<span class="pill">'+p+'</span>'}).join(''));
+  tx('slbl',t.slbl);tx('itxt',t.itxt);
+  tx('ttl',t.ttl);tx('til',t.til);
+  tx('ftit',MODE==='text'?t.ftit:t.iftit);
+  g('minp').placeholder=t.ph;
+  tx('dtit',t.dtit);tx('dsub',t.dsub);tx('dbtn',t.dbtn);
+  tx('deplbl',t.deplbl);tx('dq',t.dq);tx('dd',t.dd);tx('de',t.de);
+  if(!g('anb').disabled)tx('anbt',t.anbt);
+  tx('dtxt',t.dtxt);
+  tx('rey',t.rey);tx('rbtn',t.rbtn);
+  tx('hbt',t.hbt+(HIST.length?' ('+HIST.length+')':''));
+  tx('hey',t.hey);
+  tx('pwtit',t.pwtit);tx('pwsub',t.pwsub);tx('pwbtn',t.pwbtn);tx('pwnot',t.pwnot);
+  tx('ftxt',t.ftxt);
   if(histOpen)renderHist();
 }
 
-// ══════════════════════════════════
-// FREE COUNTER
-// ══════════════════════════════════
-function updateFC(){
-  const t=T[LANG];
-  ih('fc-txt',t.fcTxt(FREE));
-  [0,1,2].forEach(i=>g('fd'+i).classList.toggle('used',i>=FREE));
-}
-
-// ══════════════════════════════════
-// TABS
-// ══════════════════════════════════
 function switchTab(m){
   MODE=m;
-  g('tab-t').classList.toggle('on',m==='text');
-  g('tab-i').classList.toggle('on',m==='image');
-  g('text-panel').style.display=m==='text'?'block':'none';
-  g('img-panel').style.display=m==='image'?'block':'none';
-  tx('form-tit',m==='text'?T[LANG].formTit:T[LANG].imgTit);
+  g('tbt').classList.toggle('on',m==='text');
+  g('tbi').classList.toggle('on',m==='image');
+  g('tpan').style.display=m==='text'?'block':'none';
+  g('ipan').style.display=m==='image'?'block':'none';
+  tx('ftit',m==='text'?T[LANG].ftit:T[LANG].iftit);
 }
 
-// ══════════════════════════════════
-// IMAGE
-// ══════════════════════════════════
-function onDrag(e,on){e.preventDefault();g('drop-z').classList.toggle('drag',on)}
+function onDrag(e,on){e.preventDefault();g('dropz').classList.toggle('drag',on)}
 function onDrop(e){e.preventDefault();onDrag(e,false);loadFile(e.dataTransfer.files[0])}
 function onFile(e){loadFile(e.target.files[0])}
 function loadFile(file){
   if(!file||!file.type.startsWith('image/'))return;
-  const r=new FileReader();
-  r.onload=ev=>{
+  var r=new FileReader();
+  r.onload=function(ev){
     IMG_B64=ev.target.result.split(',')[1];
-    g('prev-img').src=ev.target.result; g('prev-img').style.display='block';
-    g('up-prompt').style.display='none'; g('clr-img').style.display='block';
-    g('drop-z').classList.add('has-img'); imgLoaded=true;
+    g('pimg').src=ev.target.result;g('pimg').style.display='block';
+    g('upro').style.display='none';g('clri').style.display='block';
+    g('dropz').classList.add('has');imgL=true;
   };
   r.readAsDataURL(file);
 }
 function clearImg(e){
-  e.stopPropagation();
-  IMG_B64=null; imgLoaded=false;
-  g('prev-img').style.display='none'; g('prev-img').src='';
-  g('up-prompt').style.display='block'; g('clr-img').style.display='none';
-  g('drop-z').classList.remove('has-img','drag'); g('file-inp').value='';
+  if(e)e.stopPropagation();
+  IMG_B64=null;imgL=false;
+  g('pimg').style.display='none';g('pimg').src='';
+  g('upro').style.display='block';g('clri').style.display='none';
+  g('dropz').classList.remove('has','drag');g('finp').value='';
 }
 
-// ══════════════════════════════════
-// FORM
-// ══════════════════════════════════
-function onType(el){tx('char-ct',el.value.length+' kr')}
-function setDep(btn,d){document.querySelectorAll('.db').forEach(b=>b.classList.remove('on'));btn.classList.add('on');DEPTH=d}
-function setLoading(on){
-  const t=T[LANG];
-  g('an-btn').disabled=on;
+function onType(el){tx('cct',el.value.length+' karakter')}
+function setDep(btn,d){document.querySelectorAll('.db').forEach(function(b){b.classList.remove('on')});btn.classList.add('on');DEPTH=d}
+
+function setLoad(on){
+  g('anb').disabled=on;
   g('spin').style.display=on?'block':'none';
-  tx('an-btn-txt',on?t.anLoad:t.anBtn);
+  tx('anbt',on?T[LANG].anld:T[LANG].anbt);
 }
-function showErr(msg){const el=g('err-box');el.textContent='⚠ '+msg;el.style.display='block';el.scrollIntoView({behavior:'smooth',block:'nearest'})}
-function hideErr(){g('err-box').style.display='none'}
+function showErr(msg){var el=g('ebox');el.textContent='⚠ '+msg;el.style.display='block'}
+function hideErr(){g('ebox').style.display='none'}
 
-// ══════════════════════════════════
-// SYSTEM PROMPT
-// ══════════════════════════════════
 function buildSys(){
-  const t=T[LANG], sc=t.sc, cl=t.scC, di=t.di[DEPTH]||t.di.quick;
-  const isTR=LANG==='tr';
-  return `You are Untether, a relationship psychology analyst.
-${t.tone} ${di}
-
-YOUR ENTIRE RESPONSE MUST BE ONLY VALID JSON. Start with { end with }. No text outside.
-
-{
-  "primaryType":{"name":"${isTR?'tip adı':'type name'}","emoji":"emoji","shortDesc":"${isTR?'2 cümle':'2 sentences'}","confidence":72},
-  "scores":[
-    {"label":"${sc[0]}","value":45,"color":"${cl[0]}"},
-    {"label":"${sc[1]}","value":30,"color":"${cl[1]}"},
-    {"label":"${sc[2]}","value":60,"color":"${cl[2]}"},
-    {"label":"${sc[3]}","value":70,"color":"${cl[3]}"},
-    {"label":"${sc[4]}","value":50,"color":"${cl[4]}"},
-    {"label":"${sc[5]}","value":65,"color":"${cl[5]}"}
-  ],
-  "traits":[
-    {"label":"${isTR?'özellik':'trait'}","value":"${isTR?'açıklama':'description'}","score":70,"color":"${cl[0]}"},
-    {"label":"${isTR?'özellik':'trait'}","value":"${isTR?'açıklama':'description'}","score":55,"color":"${cl[3]}"},
-    {"label":"${isTR?'özellik':'trait'}","value":"${isTR?'açıklama':'description'}","score":80,"color":"${cl[1]}"},
-    {"label":"${isTR?'özellik':'trait'}","value":"${isTR?'açıklama':'description'}","score":45,"color":"${cl[2]}"}
-  ],
-  "sections":[
-    {"icon":"🔍","title":"${isTR?'Temel Bulgular':'Key Findings'}","content":"..."},
-    {"icon":"💬","title":"${isTR?'İletişim Stili':'Communication Style'}","content":"..."},
-    {"icon":"❤️","title":"${isTR?'İlişki Dinamikleri':'Relationship Dynamics'}","content":"..."},
-    {"icon":"⚠️","title":"${isTR?'Dikkat Noktaları':'Warning Signs'}","type":"list","items":["...","...","..."]},
-    {"icon":"💡","title":"${isTR?'Tavsiyeler':'Guidance'}","type":"list","items":["...","...","..."]}
-  ]
-}`;
+  var t=T[LANG],sc=t.sc,cl=t.scC,di=t.di[DEPTH]||t.di.quick;
+  var isTR=LANG==='tr';
+  return 'You are AUREVIAAI, a relationship psychology analyst.\n'+t.tone+'\n'+di+'\n\nAnalyze the messages and respond with ONLY valid JSON:\n{\n  "primaryType":{"name":"tip adı","emoji":"emoji","shortDesc":"2 cümle","confidence":75},\n  "scores":[\n    {"label":"'+sc[0]+'","value":45,"color":"'+cl[0]+'"},\n    {"label":"'+sc[1]+'","value":30,"color":"'+cl[1]+'"},\n    {"label":"'+sc[2]+'","value":60,"color":"'+cl[2]+'"},\n    {"label":"'+sc[3]+'","value":70,"color":"'+cl[3]+'"},\n    {"label":"'+sc[4]+'","value":50,"color":"'+cl[4]+'"},\n    {"label":"'+sc[5]+'","value":65,"color":"'+cl[5]+'"}\n  ],\n  "traits":[\n    {"label":"özellik","value":"açıklama","score":70,"color":"'+cl[0]+'"},\n    {"label":"özellik","value":"açıklama","score":55,"color":"'+cl[3]+'"},\n    {"label":"özellik","value":"açıklama","score":80,"color":"'+cl[1]+'"},\n    {"label":"özellik","value":"açıklama","score":45,"color":"'+cl[2]+'"}\n  ],\n  "sections":[\n    {"icon":"🔍","title":"'+(isTR?'Temel Bulgular':'Key Findings')+'","content":"detaylı analiz..."},\n    {"icon":"💬","title":"'+(isTR?'İletişim Stili':'Communication Style')+'","content":"detaylı analiz..."},\n    {"icon":"❤️","title":"'+(isTR?'İlişki Dinamikleri':'Relationship Dynamics')+'","content":"detaylı analiz..."},\n    {"icon":"⚠️","title":"'+(isTR?'Dikkat Noktaları':'Warning Signs')+'","type":"list","items":["madde1","madde2","madde3","madde4"]},\n    {"icon":"💡","title":"'+(isTR?'Tavsiyeler':'Guidance')+'","type":"list","items":["tavsiye1","tavsiye2","tavsiye3"]},\n    {"icon":"🧠","title":"'+(isTR?'Psikolojik Profil':'Psychological Profile')+'","content":"derin analiz..."}\n  ]\n}';
 }
 
-// ══════════════════════════════════
-// PARSE JSON
-// ══════════════════════════════════
 function tryParse(raw){
   if(!raw)return null;
-  try{return JSON.parse(raw.trim())}catch{}
-  const s=raw.replace(/```[\w]*\n?/gi,'').replace(/```/g,'').trim();
-  try{return JSON.parse(s)}catch{}
-  const a=s.indexOf('{'),b=s.lastIndexOf('}');
-  if(a!==-1&&b>a){try{return JSON.parse(s.slice(a,b+1))}catch{}}
-  let d=0,st=-1;
-  for(let i=0;i<raw.length;i++){
-    if(raw[i]==='{'){if(!d)st=i;d++}
-    else if(raw[i]==='}'){d--;if(!d&&st!==-1){try{return JSON.parse(raw.slice(st,i+1))}catch{}}}
-  }
+  try{return JSON.parse(raw.trim())}catch(e){}
+  var s=raw.replace(/```[\w]*\n?/gi,'').replace(/```/g,'').trim();
+  try{return JSON.parse(s)}catch(e){}
+  var a=s.indexOf('{'),b=s.lastIndexOf('}');
+  if(a!==-1&&b>a){try{return JSON.parse(s.slice(a,b+1))}catch(e){}}
   return null;
 }
 
-// ══════════════════════════════════
-// ANALYZE
-// ══════════════════════════════════
 async function analyze(){
-  const t=T[LANG]; hideErr();
-  if(MODE==='text'&&g('msg-input').value.trim().length<20){showErr(t.errShort);return}
-  if(MODE==='image'&&!imgLoaded){showErr(t.errImg);return}
-  if(FREE<=0){showErr(LANG==='tr'?'Ücretsiz analiz hakkın doldu. Yakında premium geliyor!':'Free analyses used up. Premium coming soon!');return}
+  var t=T[LANG];hideErr();
+  if(MODE==='text'&&g('minp').value.trim().length<30){showErr(t.errS);return}
+  if(MODE==='image'&&!imgL){showErr(t.errI);return}
+  setLoad(true);g('result').style.display='none';
 
-  setLoading(true); g('result').style.display='none';
-
-  const userContent=MODE==='text'
-    ?'Analyze these messages:\n---\n'+g('msg-input').value.trim()+'\n---'
-    :[
-      {type:'image',source:{type:'base64',media_type:'image/jpeg',data:IMG_B64}},
-      {type:'text',text:'Analyze all text and personality patterns in this conversation screenshot.'}
-    ];
+  var uc=MODE==='text'
+    ?'Analyze these messages:\n---\n'+g('minp').value.trim()+'\n---'
+    :[{type:'image',source:{type:'base64',media_type:'image/jpeg',data:IMG_B64}},
+      {type:'text',text:'Analyze all relationship patterns in this screenshot.'}];
 
   try{
-    const res=await fetch('/api/analyze',{
+    var res=await fetch('/api/analyze',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({system:buildSys(),messages:[{role:'user',content:userContent}]})
+      body:JSON.stringify({system:buildSys(),messages:[{role:'user',content:uc}]})
     });
+    var data=await res.json();
+    if(!res.ok)throw new Error(data.error||'Hata: '+res.status);
+    var raw=data.content&&data.content[0]?data.content[0].text:'';
+    var parsed=tryParse(raw);
+    if(!parsed||!parsed.primaryType)throw new Error('Format hatası. Tekrar deneyin.\n\n'+raw.slice(0,200));
 
-    const data=await res.json();
-    if(!res.ok)throw new Error(data.error||'Sunucu hatası: '+res.status);
-
-    const raw=data.content?.[0]?.text||'';
-    const parsed=tryParse(raw);
-    if(!parsed?.primaryType)throw new Error('Geçersiz format. Tekrar deneyin.\n\n'+raw.slice(0,200));
-
-    // Save
-    FREE=Math.max(0,FREE-1);
-    localStorage.setItem('aai_f',FREE);
-    const entry={id:Date.now(),date:new Date().toISOString(),
+    var entry={id:Date.now(),date:new Date().toISOString(),
       emoji:parsed.primaryType.emoji||'🔍',name:parsed.primaryType.name||'—',
       conf:parsed.primaryType.confidence||70,full:parsed};
-    HIST=[entry,...HIST].slice(0,20);
+    HIST=[entry].concat(HIST).slice(0,30);
     localStorage.setItem('aai_h',JSON.stringify(HIST));
-    tx('histBtnTxt',t.histBtn+` (${HIST.length})`);
+    tx('hbt',t.hbt+' ('+HIST.length+')');
 
     renderResult(parsed);
-    updateFC();
-
   }catch(err){
     showErr(err.message);
   }
-  setLoading(false);
+  setLoad(false);
 }
 
-// ══════════════════════════════════
-// RENDER — TEASER SYSTEM
-// ══════════════════════════════════
 function renderResult(r){
-  const t=T[LANG];
-  tx('r-emoji',r.primaryType?.emoji||'🔍');
-  tx('r-name',r.primaryType?.name||'—');
-  tx('r-desc',r.primaryType?.shortDesc||'');
-  tx('conf-lbl',(r.primaryType?.confidence||70)+'% '+t.conf);
+  var t=T[LANG];
+  tx('remj',r.primaryType&&r.primaryType.emoji?r.primaryType.emoji:'🔍');
+  tx('rnam',r.primaryType&&r.primaryType.name?r.primaryType.name:'—');
+  tx('rdsc',r.primaryType&&r.primaryType.shortDesc?r.primaryType.shortDesc:'');
+  tx('clbl',(r.primaryType&&r.primaryType.confidence?r.primaryType.confidence:70)+'% '+t.conf);
   g('result').style.display='block';
-  setTimeout(()=>{g('conf-fill').style.width=(r.primaryType?.confidence||70)+'%'},100);
+  setTimeout(function(){g('cfil').style.width=(r.primaryType&&r.primaryType.confidence?r.primaryType.confidence:70)+'%'},100);
 
-  // Scores
-  ih('sc-grid',(r.scores||[]).map(s=>`
-    <div class="sc-card">
-      <div class="sc-lbl">${s.label}</div>
-      <div class="sc-num" style="color:${s.color}">${s.value}</div>
-      <div class="sc-unit">/ 100</div>
-      <div class="bar-bg"><div class="bar-fill" style="background:${s.color}" data-w="${s.value}"></div></div>
-    </div>`).join(''));
+  var scores=r.scores||[];
+  ih('scg',scores.map(function(s){
+    return '<div class="scc"><div class="scl">'+s.label+'</div><div class="scn" style="color:'+s.color+'">'+s.value+'</div><div class="scu">/ 100</div><div class="bbg"><div class="bfi" style="background:'+s.color+'" data-w="'+s.value+'"></div></div></div>';
+  }).join(''));
 
-  // Traits
-  ih('tr-grid',(r.traits||[]).map(tr=>`
-    <div class="tr-card">
-      <div class="tr-lbl">${tr.label}</div>
-      <div class="tr-val">${tr.value}</div>
-      <div class="bar-bg"><div class="bar-fill" style="background:${tr.color}" data-w="${tr.score}"></div></div>
-    </div>`).join(''));
+  var traits=r.traits||[];
+  ih('trg',traits.map(function(tr){
+    return '<div class="trc"><div class="trl">'+tr.label+'</div><div class="trv">'+tr.value+'</div><div class="bbg"><div class="bfi" style="background:'+tr.color+'" data-w="'+tr.score+'"></div></div></div>';
+  }).join(''));
 
-  setTimeout(()=>{document.querySelectorAll('.bar-fill').forEach(b=>{b.style.width=(b.dataset.w||0)+'%'})},150);
+  setTimeout(function(){
+    document.querySelectorAll('.bfi').forEach(function(b){b.style.width=(b.dataset.w||0)+'%'});
+  },150);
 
-  const sections=r.sections||[];
+  var sections=r.sections||[];
+  var FREE_COUNT=2;
+  var freeSecs=sections.slice(0,FREE_COUNT);
+  var lockedSecs=sections.slice(FREE_COUNT);
 
-  // Show first 2 sections freely (~35% of content)
-  const visibleCount=2;
-  const visible=sections.slice(0,visibleCount);
-  const blurred=sections.slice(visibleCount);
+  ih('anfree',freeSecs.map(function(s){return secH(s)}).join(''));
 
-  ih('an-visible',visible.map(s=>sectionHTML(s)).join(''));
-
-  if(blurred.length>0){
-    // Show blurred teaser
-    ih('an-blurred',blurred.map(s=>sectionHTML(s)).join(''));
-    g('teaser-wrap').style.display='block';
-    g('coming-soon').style.display='none';
+  if(lockedSecs.length>0){
+    ih('anlocked',lockedSecs.map(function(s){return secH(s)}).join(''));
+    g('tsec').style.display='block';
   } else {
-    g('teaser-wrap').style.display='none';
-    g('coming-soon').style.display='block';
+    g('tsec').style.display='none';
   }
 
   g('result').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-function sectionHTML(s){
-  if(s.type==='list') return `
-    <div class="an-card">
-      <div class="an-card-tit">${s.icon} ${s.title}</div>
-      <ul>${(s.items||[]).map(i=>`<li>${i}</li>`).join('')}</ul>
-    </div>`;
-  return `
-    <div class="an-card">
-      <div class="an-card-tit">${s.icon} ${s.title}</div>
-      <p>${s.content}</p>
-    </div>`;
+function secH(s){
+  if(s.type==='list')return '<div class="anc"><div class="act">'+s.icon+' '+s.title+'</div><ul>'+(s.items||[]).map(function(i){return '<li>'+i+'</li>'}).join('')+'</ul></div>';
+  return '<div class="anc"><div class="act">'+s.icon+' '+s.title+'</div><p>'+s.content+'</p></div>';
 }
 
-function showTeaser(){
-  // Şu an beta — sadece bilgi ver
-  const msg=LANG==='tr'
-    ?'🚀 Tam analiz özelliği yakında aktif olacak!\n\nŞu an beta aşamasındayız. Premium plan hazır olduğunda sınırsız analiz, tam raporlar ve çok daha fazlasına erişebileceksin.'
-    :'🚀 Full analysis coming soon!\n\nWe\'re currently in beta. When premium launches, you\'ll get unlimited analyses, full reports and much more.';
-  alert(msg);
+function onPW(){
+  alert(LANG==='tr'?'🚀 Premium yakında aktif olacak!\n\nŞu an beta aşamasındayız. Çok yakında sınırsız analiz ve tam raporlarla Premium başlıyor.':'🚀 Premium launching soon!\n\nFull reports and unlimited analyses coming very soon.');
 }
 
-// ══════════════════════════════════
-// HISTORY
-// ══════════════════════════════════
 function toggleHist(){
   histOpen=!histOpen;
-  const s=g('hist-section');
+  var s=g('hsec');
   s.style.display=histOpen?'block':'none';
   if(histOpen){renderHist();s.scrollIntoView({behavior:'smooth'})}
 }
+
 function renderHist(){
-  const t=T[LANG];
-  tx('hist-ey',t.histEy);
-  if(!HIST.length){ih('hist-content',`<div class="hist-empty">${t.histEmpty}</div>`);return}
-  ih('hist-content',`
-    <div>${HIST.map((e,i)=>`
-      <div class="hist-card" onclick="loadHist(${i})">
-        <div class="hist-emoji">${e.emoji}</div>
-        <div style="flex:1">
-          <div class="hist-name">${e.name}</div>
-          <div class="hist-date">${new Date(e.date).toLocaleString(LANG==='tr'?'tr-TR':'en-US',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'})}</div>
-        </div>
-        <div class="hist-conf">${e.conf}%</div>
-        <button class="hist-del" onclick="delHist(event,${i})">${t.histDel}</button>
-      </div>`).join('')}
-    </div>
-    <button onclick="clrHist()" style="display:block;margin:8px auto 0;padding:7px 18px;
-      background:transparent;border:1px solid var(--bd);border-radius:6px;
-      font-family:'DM Sans',sans-serif;font-size:11px;color:var(--mu);cursor:pointer">
-      ${t.histClr}
-    </button>`);
+  var t=T[LANG];
+  tx('hey',t.hey);
+  if(!HIST.length){
+    ih('hcon','<div style="background:var(--s1);border:1px dashed var(--bd);border-radius:10px;padding:32px;text-align:center;color:var(--mu);font-size:13px">'+t.hemp+'</div>');
+    return;
+  }
+  var html=HIST.map(function(e,i){
+    var d=new Date(e.date).toLocaleString(LANG==='tr'?'tr-TR':'en-US',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    return '<div class="hcard" onclick="loadHist('+i+')"><div class="hemj">'+e.emoji+'</div><div style="flex:1"><div class="hnam">'+e.name+'</div><div class="hdat">'+d+'</div></div><div class="hcon">'+e.conf+'%</div><button class="hdel" onclick="delHist(event,'+i+')">'+t.hdel+'</button></div>';
+  }).join('');
+  html+='<button onclick="clrHist()" style="display:block;margin:8px auto 0;padding:7px 18px;background:transparent;border:1px solid var(--bd);border-radius:6px;font-family:\'DM Sans\',sans-serif;font-size:11px;color:var(--mu);cursor:pointer">'+t.hclr+'</button>';
+  ih('hcon',html);
 }
+
 function loadHist(i){
-  const e=HIST[i];if(!e)return;
+  var e=HIST[i];if(!e)return;
   renderResult(e.full);
   if(histOpen)toggleHist();
   g('app').scrollIntoView({behavior:'smooth'});
@@ -828,20 +532,15 @@ function delHist(ev,i){
 }
 function clrHist(){HIST=[];localStorage.setItem('aai_h','[]');renderHist()}
 
-// ══════════════════════════════════
-// RESET
-// ══════════════════════════════════
 function resetApp(){
   g('result').style.display='none';
-  g('msg-input').value=''; tx('char-ct','0 kr');
-  hideErr(); clearImg({stopPropagation:()=>{}});
+  g('minp').value='';tx('cct','0 karakter');
+  hideErr();clearImg(null);
+  g('tsec').style.display='none';
   g('app').scrollIntoView({behavior:'smooth'});
 }
 
-// ══════════════════════════════════
-// INIT
-// ══════════════════════════════════
-window.onload=()=>{ applyLang(); };
+window.onload=function(){applyLang()};
 </script>
 </body>
 </html>
